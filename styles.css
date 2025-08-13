@@ -1,0 +1,101 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 50px;
+  font-family: "Roboto", "Playfair Display";
+  background: none;
+}
+
+/* Background shape */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background: #0891B2;
+  z-index: -1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#profilePhoto  {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.about {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+
+  border: 1px solid black;
+  padding: 16px;
+  background-color: white;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* My Work section */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 48px;
+}
+
+.card {
+  border: 1px solid black;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 50px;
+  position: relative;
+
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 50px);
+  background-color: #0891B2;
+  z-index: -1;
+}
+
+.footerText {
+  color: white;
+  font-size: 24px;
+}
+
+.footer img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
