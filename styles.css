@@ -2,8 +2,15 @@ body {
   position: relative;
   margin: 0;
   padding: 50px;
-  font-family: "Roboto", "Playfair Display";
+  font-family: "Playfair Display", "Roboto";
   background: none;
+}
+
+@media (max-width: 500px) {
+  .main,
+  .footer {
+    padding: 20px;
+  }
 }
 
 /* Background shape */
@@ -24,8 +31,13 @@ body::before {
 .header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+}
+
+.header-header {
+  font-size: 48px;
+  margin: 10px 0px;
 }
 
 #profilePhoto  {
@@ -41,28 +53,50 @@ body::before {
   width: 100%;
   height: auto;
 
-  border: 1px solid black;
-  padding: 16px;
+  padding: 20px;
   background-color: white;
 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.about-text {
+  padding-bottom: 24px;
+}
+
 /* My Work section */
+
+.main {
+  padding: 50px;
+}
+
+.main-header {
+  font-size: 48px;
+  margin: 10px 0px;
+}
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   gap: 48px;
 }
 
 .card {
-  border: 1px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
 }
+
+.card-content {
+  padding: 0px 32px 16px 32px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin: 16px 0px 8px 0px;
+}
+
 
 /* Footer */
 
@@ -87,6 +121,10 @@ body::before {
   height: calc(100% + 50px);
   background-color: #0891B2;
   z-index: -1;
+}
+
+.footer-header {
+  font-size: 48px;
 }
 
 .footerText {
